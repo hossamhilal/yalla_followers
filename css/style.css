@@ -1,0 +1,1414 @@
+/*=================================================================================*/
+/*=================================================================================*/
+/*==========================||---------------------------||========================*/
+/*==========================|| DESIGNED BY  HOSSAM HILAL ||========================*/
+/*==========================||---------------------------||========================*/
+/*====================================||------||===================================*/
+/*====================================|| 2022 ||===================================*/
+/*====================================||------||===================================*/
+/*=================================================================================*/
+/*=================================================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@font-face {
+    font-family: 'Hanimation_Arabic_Regular';
+    src: url('../fonts//Hanimation_Arabic_Regular.eot');
+    src: url('../fonts//Hanimation_Arabic_Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts//Hanimation_Arabic_Regular.otf') format('otf'),
+        url('../fonts//Hanimation_Arabic_Regular.svg#Hanimation_Arabic_Regular') format('svg'),
+        url('../fonts//Hanimation_Arabic_Regular.ttf') format('truetype'),
+        url('../fonts//Hanimation_Arabic_Regular.woff') format('woff'),
+        url('../fonts//Hanimation_Arabic_Regular.woff2') format('woff2');
+}
+
+body {
+    font-family: 'Hanimation_Arabic_Regular', sans-serif;
+    direction: rtl;
+    text-align: right;
+    overflow-x: hidden;
+}
+
+.enFont {
+    font-family: 'Open Sans';
+}
+
+.stopScroll {
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/**************************************************************************************************/
+/*******************************************    Buttons   ******************************************/
+/**************************************************************************************************/
+
+.primaryBtn {
+    border-radius: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    font-size: 13px;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.primaryBtn:hover {
+    color: #fff;
+}
+
+/**************************************************************************************************/
+/*******************************************    Header   ******************************************/
+/**************************************************************************************************/
+
+.header {
+    padding: 30px 0;
+}
+
+.headerNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    max-width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navMenu ul {
+    display: flex;
+    align-items: center;
+}
+
+.navMenu li {
+    margin: 0 10px;
+}
+
+.navMenu a {
+    color: #fff;
+    font-size: 13px;
+}
+
+.headerNav .primaryBtn {
+    width: 120px;
+}
+
+.mb {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .header {
+        padding: 15px 0;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
+
+    .navMenu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        background: #210436;
+        z-index: 10;
+        transition: all .7s ease-in-out;
+        transform: translateX(100%);
+    }
+
+    .navMenu.show {
+        transform: translateX(0%);
+    }
+
+    .navMenu ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .navMenu li {
+        width: 100%;
+        margin: 0;
+        border-bottom: 1px solid #1a022c;
+    }
+
+    .navMenu a {
+        display: flex;
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .headerNav .primaryBtn {
+        width: 90px;
+        padding: 5px 15px;
+        margin-inline-start: auto;
+        margin-inline-end: 15px;
+    }
+
+    .mb {
+        display: block;
+    }
+
+    .menuBtn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 25px;
+        height: 18px;
+    }
+
+    .menuBtn span {
+        width: 100%;
+        height: 2px;
+        background: var(--white);
+    }
+
+    .bodyOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 9;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .bodyOverlay.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/**************************************************************************************************/
+/****************************************    Main Sector   ****************************************/
+/**************************************************************************************************/
+
+.mainSector {
+    padding: 30px 0 70px 0;
+    overflow: hidden;
+}
+
+.mainSector .vector {
+    height: 460px;
+}
+
+.mainSector .col-6 {
+    padding: 0;
+}
+
+.mainSector .vector>img {
+    height: 100%;
+}
+
+.vectorData {
+    width: 69px;
+    background: #fff;
+    border-radius: 16px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.vectorData img {
+    height: 18px;
+    width: 18px;
+    margin-inline-end: 5px;
+}
+
+.mainSector .col-md-3:first-of-type .row {
+    border-radius: 25px 0 0 25px;
+    overflow: hidden;
+}
+
+.mainSector .col-md-3:last-of-type .row {
+    border-radius: 0 20px 20px 0;
+    overflow: hidden;
+}
+
+.search {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchVector {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 50px;
+}
+
+.searchBox {
+    width: 100%;
+    padding: 0 6%;
+}
+
+.searchBox .primaryBtn {
+    width: 100%;
+}
+
+.customSelect {
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.selected {
+    width: 100%;
+    padding: 5px 15px;
+    border: 0;
+    background: #fff;
+    color: #777;
+    font-weight: 500;
+    text-transform: capitalize;
+    min-height: 40px;
+    line-height: 30px;
+    cursor: pointer;
+    position: relative;
+    padding-inline-end: 30px;
+    border-radius: 25px;
+}
+
+.selected::before {
+    content: '';
+    border: solid #777777;
+    border-width: 0 2px 2px 0;
+    padding: 2px;
+    display: inline-block;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    position: absolute;
+    left: 15px;
+    top: 16px;
+    transition: all .3s ease-in-out;
+}
+
+.selected.active::before {
+    transform: rotate(225deg);
+}
+
+.selectList {
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    margin-top: 3px;
+    width: 100%;
+    display: none;
+    z-index: 2;
+}
+
+.customSelect li {
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    color: #777;
+    border: 3px solid transparent;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.customSelect li:last-of-type {
+    border-bottom: 0;
+}
+
+.customSelect li.optionSelected {
+    border-inline-start-color: #fe9801;
+    background: #fff0d9;
+    color: #3f51b6;
+}
+
+.customSelect li:hover {
+    background: #fff0d9;
+    color: #6200aa;
+    cursor: pointer;
+}
+
+.customSelect li[value="hide"] {
+    display: none;
+}
+
+@media screen and (max-width:767px) {
+    .search {
+        padding: 50px 0;
+    }
+
+    .searchVector {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width:768px) {
+    .searchBox .col-12 {
+        padding: 0 5px;
+    }
+}
+
+@media (min-width:768px) and (max-width:992px) {
+    .searchVector {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 30px;
+    }
+
+    .mainSector .vector {
+        height: 300px;
+    }
+}
+
+
+
+/**************************************************************************************************/
+/****************************************        Cards     ****************************************/
+/**************************************************************************************************/
+
+.cards {
+    padding: 40px 0;
+}
+
+.cards .col-12 {
+    padding: 30px 15px;
+}
+
+.card {
+    border-radius: 10px;
+    border: 0;
+    margin-top: 50px;
+    flex-direction: column;
+    color: #060028;
+}
+
+.vip {
+    background: transparent linear-gradient(124deg, #A57C00 0%, #F9D76C 50%, #A57C00 100%) 0% 0% no-repeat padding-box;
+}
+
+.male {
+    background: transparent linear-gradient(121deg, #5F00A4 0%, #C368FF 46%, #4B0082 100%) 0% 0% no-repeat padding-box;
+}
+
+.female {
+    background: transparent linear-gradient(121deg, #FF809E 0%, #FFC0DB 46%, #FF809E 100%) 0% 0% no-repeat padding-box;
+}
+
+.cardHeader {
+    display: flex;
+    padding: 0 15px;
+}
+
+.cardVector {
+    width: 60%;
+    height: 180px;
+    margin-top: -50px;
+    border-radius: 10px;
+}
+
+.vip .cardVector {
+    border: 2px solid #F5D367;
+}
+
+.male .cardVector {
+    border: 2px solid #BF65FB;
+}
+
+.female .cardVector {
+    border: 2px solid #FFBDD8;
+}
+
+.cardInfo {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.country p {
+    margin: 0;
+}
+
+.countryFlag {
+    max-width: 30px;
+}
+
+.cardVector img {
+    height: 100%;
+    border-radius: inherit;
+}
+
+.cardLogo {
+    margin-bottom: 20px;
+}
+
+.cardLogo img {
+    height: 40px;
+    width: 40px;
+}
+
+.cardCount h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 25px;
+}
+
+.cardCount p {
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.cardBody {
+    display: flex;
+    padding: 5px 15px 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardUser h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.cardUser p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.cardBtn {
+    background: rgba(0, 0, 0, .3);
+    border-radius: 20px;
+    color: #fff;
+    padding: 5px;
+    padding-inline-end: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    width: 105px;
+    transition: all .4s ease-in-out;
+}
+
+.cardBtn:hover {
+    color: #fff;
+}
+
+.cardBtn img {
+    margin-inline-end: 5px;
+    max-width: 20px;
+}
+
+.cardUser p {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.cardFooter {
+    background: rgba(0, 0, 0, .3);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 14px;
+}
+
+.cardFooter img {
+    margin-inline-end: 5px;
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.cardFooter i {
+    margin-inline-start: 5px;
+}
+
+@media screen and (max-width:768px) {
+    .card {
+        margin-top: 30px;
+    }
+
+    .cardVector {
+        width: 50%;
+        height: 130px;
+    }
+
+    .cardInfo {
+        width: 50%;
+    }
+
+    .cardCount h3 {
+        font-size: 25px;
+        line-height: 20px;
+    }
+
+    .cardCount p {
+        margin-bottom: 5px;
+    }
+
+    .cardLogo {
+        margin-bottom: 5px;
+    }
+
+    .cardLogo img {
+        height: 35px;
+        width: 35px;
+    }
+
+    .country {
+        display: flex;
+        align-items: center;
+    }
+
+    .countryFlag {
+        max-width: 22px;
+        max-height: 15px;
+        margin-inline-end: 5px;
+    }
+
+    .cardBtn img {
+        max-width: 17px;
+    }
+
+    .cardBtn {
+        width: fit-content;
+        padding: 5px;
+        font-size: 13px;
+    }
+
+    .cardUser h2 {
+        font-size: 16px;
+    }
+
+    .cardUser p {
+        font-size: 11px;
+    }
+}
+
+/******************************************************************************************************/
+/****************************************        Info Text     ****************************************/
+/*****************************************************************************************************/
+
+.infoText {
+    border-radius: 20px;
+    color: #FFFFFF;
+    padding: 35px 25px;
+    text-align: center;
+}
+
+.infoText h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+@media screen and (max-width:768px) {
+    .infoText {
+        padding: 15px;
+    }
+
+    .infoText h1 {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+}
+
+
+/******************************************************************************************************/
+/****************************************         Footer      ****************************************/
+/*****************************************************************************************************/
+
+.footer {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footerLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto 20px;
+}
+
+.footer p {
+    color: #fff;
+}
+
+@media screen and (max-width:768px) {
+    .footer p {
+        font-size: 14px;
+    }
+}
+
+/******************************************************************************************************/
+/****************************************        VIP Page      ****************************************/
+/*****************************************************************************************************/
+
+.wrapperBox {
+    max-width: 1080px;
+    width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.wrapperHeader {
+    background: transparent linear-gradient(270deg, #0A0033 0%, #300031 100%) 0% 0% no-repeat padding-box;
+    border-radius: 18px 18px 0px 0px;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.wrapperBody {
+    padding: 30px 5%;
+    color: #040320;
+}
+
+.wrapperBox h3 {
+    font-size: 25px;
+    line-height: 35px;
+    margin-bottom: 20px;
+}
+
+.wrapperBody ul {
+    list-style: disc;
+    list-style-position: inside;
+}
+
+.wrapperBox li {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+
+table {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 10px 30px #00000029;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+thead {
+    background: transparent linear-gradient(270deg, #0A0033 0%, #300031 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+
+th,
+td {
+    padding: 10px;
+    width: 50%;
+    font-weight: 400;
+}
+
+tr:nth-child(2) {
+    background: #F9F9F9;
+}
+
+table span {
+    background: transparent linear-gradient(115deg, #6200AA 0%, #310055 100%) 0% 0% no-repeat padding-box;
+    border-radius: 25px;
+    color: #fff;
+    padding: 0 12px;
+    font-size: 13px;
+    margin-inline-start: 10px;
+}
+
+.wrapperFooter {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.wrapperFooter p {
+    font-size: 15px;
+}
+
+.wrapperFooter h2 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.wrapperFooter img {
+    margin: 0 15px;
+}
+
+.wrapperFooter a {
+    color: #040320;
+    font-weight: 600;
+}
+
+.wrapperFooter a:hover {
+    color: #6200aa;
+}
+
+@media screen and (max-width:768px) {
+    .wrapperHeader {
+        font-size: 20px;
+    }
+
+    .wrapperBody {
+        padding: 15px;
+    }
+
+    .wrapperBox h3 {
+        font-size: 16px;
+        line-height: 25px;
+        margin-bottom: 10px;
+    }
+
+    .wrapperBox li {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width:425px) {
+
+    th,
+    td {
+        width: auto;
+    }
+
+    .wrapperFooter h2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapperFooter img {
+        margin: 15px 0;
+        max-width: 40px;
+    }
+
+}
+
+/******************************************************************************************************/
+/****************************************     About     **********************************************/
+/*****************************************************************************************************/
+
+.searchTitle {
+    color: #FFFFFF;
+    font-size: 55px;
+    margin-bottom: 40px;
+}
+
+.about {
+    text-align: center;
+    color: #fff;
+}
+
+.about .logo {
+    margin: 0 auto 30px;
+}
+
+.aboutBox {
+    max-width: 900px;
+    margin: 0 auto 80px;
+}
+
+.about p {
+    line-height: 35px;
+}
+
+.about h3 {
+    color: #5447FF;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width:768px) {
+    .searchTitle {
+        font-size: 40px;
+    }
+
+    .about p {
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    .about h3 {
+        font-size: 21px;
+        line-height: 30px;
+    }
+}
+
+/******************************************************************************************************/
+/*******************************************    Add Form  *********************************************/
+/*****************************************************************************************************/
+
+.form {
+    padding: 5%;
+}
+
+.field {
+    margin-bottom: 30px;
+}
+
+.field label {
+    font-size: 18px;
+}
+
+.form-control {
+    background: #F6F6F6;
+    border: 1px solid #C2C2C2;
+    border-radius: 5px;
+    height: 50px;
+    font-size: 15px;
+}
+
+.field textarea {
+    height: 150px;
+    resize: none;
+}
+
+.form-control::placeholder {
+    color: #929292;
+}
+
+.form .selected {
+    background: #F6F6F6;
+    border: 1px solid #C2C2C2;
+    border-radius: 5px;
+    height: 50px;
+    min-height: 50px;
+    line-height: 40px;
+}
+
+.form .selected::before {
+    padding: 3px;
+    top: 19px;
+}
+
+.upload {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.upload .fileName {
+    background: #F6F6F6;
+    border: 1px solid #C2C2C2;
+    border-radius: 0 5px 5px 0;
+    margin: 0;
+    height: 100%;
+    padding: 5px 15px;
+    width: calc(100% - 100px);
+    font-size: 14px;
+    color: #929292;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.upload input {
+    display: none;
+}
+
+.uploadFile {
+    background: transparent linear-gradient(107deg, #6200AA 0%, #310055 100%) 0% 0% no-repeat padding-box;
+    border-radius: 5px 0px 0px 5px;
+    height: 100%;
+    margin: 0;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 100px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.uploadFile:hover {
+    background: #F6356A;
+}
+
+.flexFields {
+    display: flex;
+    align-items: center;
+}
+
+.customRadio {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-inline-end: 40px;
+    height: 50px;
+}
+
+.customRadio input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #B2B2B2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline-end: 15px;
+}
+
+.customRadio h3 {
+    margin: 0;
+}
+
+.customRadio input:checked~.checkmark:before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: #390063;
+    border-radius: 50%;
+}
+
+.customRadio input:checked~.checkmark {
+    border-color: #390063;
+}
+
+.customRadio img {
+    max-width: 20px;
+}
+
+.customRadio h3 {
+    font-size: 16px;
+}
+
+.form .list {
+    border: 1px solid #f1f1f1;
+}
+
+.code {
+    background: #050224 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    padding: 0 10px;
+    color: #fff;
+    height: 50px;
+    width: 150px;
+    letter-spacing: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+}
+
+.form .primaryBtn {
+    border-radius: 5px;
+    height: 50px;
+    width: 160px;
+}
+
+.instagramPage .form .primaryBtn:hover {
+    background: #F6356A;
+}
+
+.formFlex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+.nots {
+    margin: 40px 0;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.nots h3 {
+    color: #F6356A;
+    font-size: 36px;
+}
+
+.nots p {
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 5px;
+}
+
+.formNote {
+    margin-top: 30px;
+}
+
+.formNote p {
+    margin: 0;
+    position: relative;
+}
+
+.formNote p::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: transparent linear-gradient(131deg, #6200AA 0%, #310055 100%) 0% 0% no-repeat padding-box;
+    display: inline-flex;
+    border-radius: 5px;
+}
+
+@media screen and (max-width:768px) {
+    .field {
+        margin-bottom: 15px;
+    }
+
+    .field label {
+        font-size: 15px;
+    }
+
+    .field .form-control {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .upload {
+        height: 40px;
+    }
+
+    .upload .fileName {
+        font-size: 13px;
+        width: calc(100% - 75px);
+    }
+
+    .uploadFile {
+        width: 70px;
+        padding: 5px;
+        font-size: 13px;
+    }
+
+    .customRadio {
+        height: 40px;
+    }
+
+    .form .selected {
+        min-height: 40px;
+        line-height: 30px;
+        height: 40px;
+    }
+
+    .form .selected::before {
+        top: 15px;
+        padding: 2px;
+        left: 12px;
+    }
+
+    .code {
+        min-width: 100px;
+        width: 100px;
+        font-size: 20px;
+        letter-spacing: 8px;
+        margin-inline-end: 20px;
+    }
+
+    .formFlex {
+        margin: 15px 0;
+    }
+
+    .nots h3 {
+        font-size: 25px;
+    }
+
+    .nots p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .contactForm .primaryBtn {
+        height: 40px;
+        margin-top: 10px;
+    }
+}
+
+/******************************************************************************************************/
+/****************************************         Loader      ****************************************/
+/*****************************************************************************************************/
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 999;
+    background: transparent linear-gradient(270deg, #0A0033 0%, #300031 100%) 0% 0% no-repeat padding-box;
+}
+
+.loaderBox {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loaderBox img {
+    margin-bottom: 30px;
+}
+
+.loaderBar {
+    width: 180px;
+    height: 5px;
+    display: inline-block;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+}
+
+.loaderBar::after {
+    content: '';
+    width: 40px;
+    height: 5px;
+    background: #6200AA;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    /* animation: hitZak 2s linear infinite alternate; */
+    animation: animFw 8s linear infinite;
+}
+
+@keyframes animFw {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes hitZak {
+    0% {
+        left: 0;
+        transform: translateX(-1%);
+    }
+
+    100% {
+        left: 100%;
+        transform: translateX(-99%);
+    }
+}
+
+
+/**************************************************************************************************/
+/****************************************  Instagram Theme  ***************************************/
+/**************************************************************************************************/
+
+.instagramPage {
+    background: url('../images/instagramBg.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.instagramPage .primaryBtn {
+    background: transparent linear-gradient(105deg, #6200AA 0%, #310055 100%) 0% 0% no-repeat padding-box;
+}
+
+.instagramPage .primaryBtn:hover {
+    background: #6200aa;
+}
+
+.instagramPage .cardBtn:hover {
+    background: #6200aa;
+}
+
+.instagramPage .infoText {
+    background: transparent linear-gradient(270deg, #0A0033 0%, #300031 100%) 0% 0% no-repeat padding-box;
+}
+
+/**************************************************************************************************/
+/*******************************************  Snap Theme  *****************************************/
+/**************************************************************************************************/
+
+.snapPage {
+    background: url('../images/snapBg.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.snapPage .primaryBtn {
+    background: transparent linear-gradient(105deg, #ffe047 0%, #ffcf00 100%) 0% 0% no-repeat padding-box;
+}
+
+.snapPage .primaryBtn:hover {
+    background: #FFCF00;
+}
+
+.snapPage .cardBtn:hover {
+    background: #FFCF00;
+}
+
+.snapPage .infoText {
+    background: transparent linear-gradient(105deg, #ffe047 0%, #ffcf00 100%) 0% 0% no-repeat padding-box;
+}
+
+/**************************************************************************************************/
+/******************************************  Twitter Theme  ***************************************/
+/**************************************************************************************************/
+
+.twitterPage {
+    background: url('../images/twitterBg.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.twitterPage .primaryBtn {
+    background: transparent linear-gradient(105deg, #03A9F4 0%, #046089 100%) 0% 0% no-repeat padding-box;
+}
+
+.twitterPage .primaryBtn:hover {
+    background: #046089;
+}
+
+.twitterPage .cardBtn:hover {
+    background: #03A9F4;
+}
+
+.twitterPage .infoText {
+    background: transparent linear-gradient(105deg, #03A9F4 0%, #046089 100%) 0% 0% no-repeat padding-box;
+}
+
+/**************************************************************************************************/
+/******************************************  Tiktok Theme  ****************************************/
+/**************************************************************************************************/
+
+.tiltokPage {
+    background: url('../images/tiktokBg.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.tiltokPage .primaryBtn {
+    background: transparent linear-gradient(105deg, #DB5296 0%, #AB1C64 100%) 0% 0% no-repeat padding-box;
+}
+
+.tiltokPage .primaryBtn:hover {
+    background: #AB1C64;
+}
+
+.tiltokPage .cardBtn:hover {
+    background: #AB1C64;
+}
+
+.tiltokPage .infoText {
+    background: #75214C;
+}
+
+
+/**************************************************************************************************/
+/*****************************************  Youtube Theme  ****************************************/
+/**************************************************************************************************/
+
+.youtubePage {
+    background: url('../images/youtubeBg.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.youtubePage .primaryBtn {
+    background: transparent linear-gradient(105deg, #DB5296 0%, #D42428 100%) 0% 0% no-repeat padding-box;
+}
+
+.youtubePage .primaryBtn:hover {
+    background: #D42428;
+}
+
+.youtubePage .cardBtn:hover {
+    background: #D42428;
+}
+
+.youtubePage .infoText {
+    background: #D42428;
+}
+
+/**************************************************************************************************/
+/*****************************************  Telegram Theme  ***************************************/
+/**************************************************************************************************/
+
+.telegramPage {
+    background: url('../images/telegramBg.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.telegramPage .primaryBtn {
+    background: transparent linear-gradient(105deg, #32b4ff 0%, #0082be 100%) 0% 0% no-repeat padding-box;
+}
+
+.telegramPage .primaryBtn:hover {
+    background: #199BDF;
+}
+
+.telegramPage .cardBtn:hover {
+    background: #199BDF;
+}
+
+.telegramPage .infoText {
+    background: #014673;
+}
+
+/**************************************************************************************************/
+/*****************************************   Discord Theme  ***************************************/
+/**************************************************************************************************/
+
+.discordPage {
+    background: url('../images/discordBg.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.discordPage .primaryBtn {
+    background: transparent linear-gradient(105deg, #8ca0f5 0%, #404f8d 100%) 0% 0% no-repeat padding-box;
+}
+
+.discordPage .primaryBtn:hover {
+    background: #7387DC;
+}
+
+.discordPage .cardBtn:hover {
+    background: #7387DC;
+}
+
+.discordPage .infoText {
+    background: #3F4EA2;
+}
